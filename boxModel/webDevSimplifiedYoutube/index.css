@@ -30,7 +30,7 @@ If you set box-sizing: border-box; on an element, padding and border are include
   background-color: #0cfaab;
   width: 200px;
   height: 200px;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
 }
 
