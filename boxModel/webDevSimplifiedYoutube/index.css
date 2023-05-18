@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  background-color: black;
+}
+body {
+  border: 2px solid yellow;
+}
+/*
+PADDING:https://www.w3schools.com/css/css_boxmodel.asp
+
+margin:https://www.w3schools.com/css/css_margin.asp
+
+border:https://www.w3schools.com/css/css_border.asp
+
+Without the CSS box-sizing Property:::
+width + padding + border = actual width of an element
+height + padding + border = actual height of an element
+
+This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).
+
+With the CSS box-sizing Property
+The box-sizing property allows us to include the padding and border in an element's total width and height.
+
+If you set box-sizing: border-box; on an element, padding and border are included in the width and height:
+
+*/
+.box-one {
+  background-color: #0cfaab;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.box-two {
+  background-color: #fc0cd4;
+  width: 250px;
+  height: 200px;
+  padding: 10px;
+  border: 20px solid red;
+}
