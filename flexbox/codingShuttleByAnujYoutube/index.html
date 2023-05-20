@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        border: 5px solid black;
+        box-sizing: border-box;
+        height: 450px;
+      }
+
+      .container {
+        border: 2px solid red;
+        height: 400px;
+        display: flex;
+        /* flex-direction: column; */
+        /* flex-wrap: wrap;*/
+        gap: 10px;
+        flex-flow: wrap row;
+        /* justify-content: space-around;
+         */
+        /* justify-content: space-between; */
+        /* justify-content: flex-end; */
+        justify-content: center;
+        align-items: center;
+        /* align-items: flex-end; */
+        /* align-items: flex-start; */
+        align-content: space-evenly;
+      }
+
+      /*
+
+
+align-items->to centre our box we use the align items property to align our item on the cross-axis,that is the block axis running vertically
+
+justify-content --> to align the items on the main axis, that is inline axis running horizontally
+
+main-axis (justify-content)
+________________
+________________
+|               |  |
+|               |  | cross-axis(align-items)
+|_______________|  |
+
+note:whenever user set display:flex then by default 
+the divs are displayed on the main-axis(horizontally) 
+hence to make it in vertically use flex-direction:column
+
+The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).
+
+Tip: Use the align-items property to align the items vertically.
+
+Note: The justify-content property can also be used on a grid container to align grid items in the inline direction. For pages in English, inline direction is left to right and block direction is downward.
+
+justify-content: flex-start|flex-end|center|space-between|space-around|space-evenly|initial|inherit;
+
+Property Values
+Value	: Description
+flex-start	Default value. Items are positioned at the beginning of the container	
+flex-end	Items are positioned at the end of the container	
+center	Items are positioned in the center of the container	
+space-between	Items will have space between them	
+space-around	Items will have space before, between, and after them	
+space-evenly	Items will have equal space around them
+initial	Sets this property to its default value. Read about initial	
+inherit	Inherits this property from its parent element. 
+
+The justify-items property is set on the grid container to give child elements (grid items) alignment in the inline direction.
+
+For pages in English, inline direction is left to right and block direction is downward.
+
+For this property to have any alignment effect, the grid items need available space around themselves in the inline direction.
+
+Tip: To align grid items in block direction instead of inline direction, use align-items property.
+
+justify-items: legacy|normal|stretch|positional alignment|overflow-alignment|baseline alignment|initial|inherit;
+
+
+Value	: Description
+legacy	Default value. Grid items with justify-self value 'auto' only inherits grid container justify-items property value if it starts with 'legacy'. It exists to implement the legacy alignment behavior of HTML's 〈center〉 element and align attribute.	
+normal	Dependant on layout context, but similar to 'stretch' for grid layout	
+stretch	Stretches to fill the grid cell if inline-size (width) is not set.	
+start	Align items at the start in the inline direction	
+left	Align items to the left	
+center	Align items to the center	
+end	Align items at the end in the inline direction	
+right	Align items to the right	
+overflow-alignment	
+'safe' sets alignment of the item to 'start' if the content overflows
+'unsafe' keeps the alignment value regardless of wether or not the item content overflows
+baseline alignment	The element is aligned with the baseline of the parent.	
+initial	Sets this property to its default value. Read about initial	
+inherit	Inherits this property from its parent element.
+      */
+
+      .box {
+        border: 2px solid green;
+        width: 80px;
+      }
+
+      #box-1 {
+        order: 1;
+        flex-grow: 1;
+      }
+
+      #box-4 {
+        /* to use below property ,then remove flex-wrap property from parent */
+        flex-shrink: 4;
+      }
+      #box-5 {
+        flex: 0 0 200px;
+      }
+
+      #box-2 {
+        order: 2;
+      }
+
+      #box-3 {
+        flex-grow: 2;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    https://www.youtube.com/watch?v=oJXmXzfjrBY&t=148s
+    <div class="container">
+      <!-- Emmet cheat sheet -->
+      <!-- .container.box#box-${b0x-$}*8 -->
+      <div class="box" id="box-1">box-1</div>
+      <div class="box" id="box-2">box-2</div>
+      <div class="box" id="box-3">box-3</div>
+      <div class="box" id="box-4">box-4</div>
+      <div class="box" id="box-5">box-5</div>
+      <div class="box" id="box-6">box-6</div>
+      <div class="box" id="box-7">box-7</div>
+      <div class="box" id="box-8">box-8</div>
+    </div>
+  </body>
+</html>
