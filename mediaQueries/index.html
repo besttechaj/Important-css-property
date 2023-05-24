@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media queries</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      border: 2px solid red;
+      height: 100%;
+      width: 100%;
+    }
+    #main {
+      border: 2px solid purple;
+      width: 100%;
+      height: 800px;
+      background-color: rgb(247, 197, 131);
+    }
+
+    #main h1 {
+      color: black;
+      font-size: 3rem;
+      text-align: center;
+      margin: 10px 20px;
+    }
+
+    #main .text,
+    .img {
+      float: left;
+      height: 500px;
+      border: 2px solid red;
+      width: 50%;
+      color: black;
+      background-color: yellow;
+    }
+
+    .img img {
+      width: 100%;
+      height: 450px;
+      padding: 10px;
+    }
+
+    .text p {
+      font-size: 1.5rem;
+      padding: 10px;
+      text-align: justify;
+    }
+
+    /* media queries */
+
+    /* for tablet */
+
+    @media (max-width: 785px) {
+      #main .text,
+      .img {
+        height: auto;
+      }
+
+      #main h1 {
+        color: blue;
+        font-size: 2.5rem;
+      }
+
+      .text p {
+        font-size: 1rem;
+        color: blueviolet;
+      }
+      .img img {
+        width: 100%;
+        /* making height will adjust itself according to device */
+        height: auto;
+      }
+    }
+
+    /* for mobile */
+    @media (max-width: 480px) {
+      #main .text,
+      .img {
+        height: auto;
+      }
+
+      #main h1 {
+        color: rgb(46, 116, 9);
+        font-size: 1.5rem;
+      }
+
+      #main .text,
+      .img {
+        width: 100%;
+      }
+
+      .text p {
+        font-size: 0.6rem;
+        color: rgb(127, 176, 228);
+      }
+      .img img {
+        width: 100%;
+        /* making height will adjust itself according to device */
+        height: auto;
+      }
+    }
+
+    /* to set range in media queries  */
+    @media (min-width: 920px) and (max-width: 1000px) {
+      #main .text,
+      .img {
+        height: auto;
+      }
+
+      #main h1 {
+        color: rgb(238, 126, 128);
+        font-size: 2.8rem;
+      }
+
+      .text p {
+        font-size: 1rem;
+        color: rgb(146, 11, 139);
+      }
+      .img img {
+        width: 100%;
+        /* making height will adjust itself according to device */
+        height: auto;
+      }
+    }
+  </style>
+  <body>
+    https://www.youtube.com/watch?v=e2zzDcyI_nA&t=279s
+    <div id="main">
+      <h1>Media queries...</h1>
+      <div class="text">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta
+          quis perferendis dolorum magni a molestiae sunt mollitia blanditiis
+          impedit? Atque officiis labore veniam porro cumque molestiae quia
+          reprehenderit distinctio.
+        </p>
+      </div>
+      <div class="img">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67r_8sfCi8A3qriFS0hQhSea7xokFCVYwrW62R-NpLdvRf5AWa7anuCxeGwb1nvjEPu0&usqp=CAU"
+          alt="cat_img"
+        />
+      </div>
+    </div>
+  </body>
+</html>
