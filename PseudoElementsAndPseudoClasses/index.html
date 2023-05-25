@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      border: 2px SOlid red;
+      padding: 20px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    /* some pseudo classes are */
+
+    .primary-btn:hover {
+      background-color: black;
+      color: red;
+    }
+
+    .primary-btn:link {
+      color: rgb(219, 222, 24);
+      padding: 10px;
+    }
+
+    .primary-btn:visited {
+      color: orange;
+    }
+
+    /* whenever someone click on the button then trigger something that's why we use active pseudo class which let us know that button has been clicked */
+    .primary-btn:active {
+      background-color: rgb(17, 140, 241);
+      color: black;
+      border: 3px dotted pink;
+    }
+
+    /* to get the first child of any parent container we can apply pseudo classes */
+
+    /* ul li:first-child {
+      background-color: aquamarine;
+    } */
+
+    /* similarly to get the last child of any particular parent element */
+    /* ul li:last-child {
+      background-color: violet;
+    } */
+
+    /* similarly to get the nth child of any particular parent element */
+    /* nth -child formula: An+B
+    here n=0,1,2,3,4,5,...
+    if we provide only one value then it will be treated as B.
+    you can give both A,B value
+    */
+
+    /* let's take B=4 value then A will be treated as 0
+    An+B => 0*n+4 = 4
+     here n=0,1,2,3,4,5,...
+    */
+    /* ul li:nth-child(4) {
+      background-color: brown;
+    } */
+
+    /* to define A */
+    /* An+B=> 2*n+0=>2n  */
+    ul li:nth-child(2n) {
+      /* provided only A value that's why it is considering B as 0 automatically */
+
+      /* here 2n means we have selected all the even positions 
+       here n=0,1,2,3,4,5,...
+      */
+      background-color: red;
+    }
+    ul li:nth-child(3n) {
+      /* background-color: blue; */
+    }
+
+    /* to define A and B*/
+    /* An+B=> 2*n+1=> here n=0,1,2,3,4,...  */
+    ol > li:nth-child(2n + 1) {
+      background-color: #7fcb0d;
+    }
+
+    /* some pseudo elements are: */
+
+    h2::first-letter {
+      font-size: 4rem;
+      color: blue;
+      text-transform: uppercase;
+    }
+
+    /* whenever selecting items this property will be applied */
+    ::selection {
+      background-color: black;
+      color: chartreuse;
+    }
+
+    P::first-line {
+      background-color: aqua;
+    }
+
+    /* Before and After pseudo elements */
+    h1::before {
+      content: 'Before PSEudo element';
+      background-color: chartreuse;
+    }
+    h1::after {
+      content: 'After pseudo element';
+      background-color: #719f79;
+    }
+
+    form > label::before {
+      content: '*';
+      background-color: chartreuse;
+    }
+
+    .required::after {
+      content: '*';
+      color: red;
+    }
+
+    .important::after {
+      content: 'Mandatory field';
+      background-color: red;
+      color: white;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    https://www.youtube.com/watch?v=x0prF61CpHY&t=879s
+    <main>
+      <h1>This sentence consists of before and after pseudo element</h1>
+
+      <form>
+        <div>
+          <label class="required">Name</label>
+          <input class="important" type="text" placeholder="Enter your name" />
+        </div>
+        <div>
+          <label class="required">email</label>
+          <input type="email" placeholder="Enter your email" />
+        </div>
+        <div>
+          <label class="required">password</label>
+          <input type="password" placeholder="Enter your password" />
+        </div>
+      </form>
+      <h2 class="important">this is heading</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, vero
+        reprehenderit eaque aut ipsum deserunt iste qui fugit sint sit quos
+        laboriosam repellendus adipisci neque quidem id magnam cupiditate ipsa
+        placeat voluptatem obcaecati molestiae nostrum quo! Temporibus quasi cum
+        id suscipit facere. Repudiandae adipisci quo necessitatibus ea quos,
+        quis exercitationem?
+      </p>
+      <a class="primary-btn" href="#">Learn more</a>
+      <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+        <li>item-9</li>
+        <li>item-10</li>
+      </ul>
+      <ul>
+        <li>item n0-1</li>
+        <li>item n0-2</li>
+        <li>item n0-3</li>
+        <li>item n0-4</li>
+        <li>item n0-5</li>
+        <li>item n0-6</li>
+        <li>item n0-7</li>
+        <li>item n0-8</li>
+      </ul>
+      <ol>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+        <li>item-9</li>
+        <li>item-10</li>
+      </ol>
+      <ol>
+        <li>item n0-1</li>
+        <li>item n0-2</li>
+        <li>item n0-3</li>
+        <li>item n0-4</li>
+        <li>item n0-5</li>
+        <li>item n0-6</li>
+        <li>item n0-7</li>
+        <li>item n0-8</li>
+      </ol>
+    </main>
+  </body>
+</html>

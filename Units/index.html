@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      border: 4px solid rgb(239, 106, 5);
+      height: 500px;
+    }
+    #div-1 {
+      height: 100px;
+      width: 800px;
+      background-color: rgb(128, 255, 0);
+    }
+    #div-2 {
+      height: 20%;
+      width: 70%;
+      background-color: rgb(238, 201, 98);
+    }
+    #parent {
+      height: 30%;
+      width: 80%;
+      background-color: rgb(174, 71, 238);
+    }
+    #div-3 {
+      height: 50%;
+      width: 50%;
+      background-color: rgb(34, 225, 242);
+    }
+
+    #div-4 {
+      background-color: cyan;
+      font-size: 20px;
+    }
+    #div-5 {
+      background-color: blue;
+      font-size: 1em;
+    }
+  </style>
+  <body>
+    https://www.youtube.com/watch?v=mNkYdcL-SEY
+    <div id="div-1">
+      pixels : WHILE COMPRESSING THE BROWSER ,THE DIV WILL MAINTAIN ITS ORIGINAL
+      STAGE.HENCE SCROLL BAR IS ADDED
+    </div>
+    <div id="div-2">
+      % : WHILE COMPRESSING THE BROWSER ,THE DIV WILL adjust according to the
+      browser
+    </div>
+    <div id="parent">
+      THis parent is adjusting % value according to its parent that is body
+      <div id="div-3">
+        % : IF the child div has a parent element, then it will take % value
+        w.r.t.its parent div___ note -> here we are providing child component
+        width and height of 50% each.
+      </div>
+    </div>
+    <div id="div-4">
+      font size is 20px
+      <div id="div-5">
+        here the font size is also 20px because em will take value w.r.t. its
+        parent element. if parent element fontsize:16px then if we provide font
+        side in em unit inside child then 1em: 20px
+      </div>
+    </div>
+  </body>
+</html>
